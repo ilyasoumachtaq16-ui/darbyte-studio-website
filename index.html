@@ -5,8 +5,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
-<meta name="description" content="DARBYTE Studio - Web design, mobile apps and digital solutions in Morocco.">
-<title>DARBYTE Studio | Digital Agency</title>
+
+<title>DARBYTE Studio | Création de sites web et applications au Maroc</title>
+<meta name="description" content="DARBYTE Studio accompagne les entreprises et entrepreneurs au Maroc : création de sites web, applications Android et catalogues digitaux.">
+<meta name="keywords" content="création site web Maroc, développement web, application Android, catalogue digital, DARBYTE Studio">
+<meta name="author" content="DARBYTE Studio">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ilyasoumachtaq16-ui.github.io/darbyte-studio-website/">
+
+<meta property="og:title" content="DARBYTE Studio | Solutions digitales">
+<meta property="og:description" content="Sites web professionnels, applications mobiles et solutions digitales au Maroc.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ilyasoumachtaq16-ui.github.io/darbyte-studio-website/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "DARBYTE Studio",
+  "url": "https://ilyasoumachtaq16-ui.github.io/darbyte-studio-website/",
+  "description": "Création de sites web, applications mobiles et catalogues digitaux au Maroc.",
+  "areaServed": "Morocco",
+  "telephone": "+212611659452"
+}
+</script>
 
 <style>
 :root{
@@ -16,7 +38,7 @@
   --ink:#172b4d;
   --muted:#64748b;
   --bg:#f3f7fc;
-  --white:#ffffff;
+  --white:#fff;
   --border:#e5edf6;
   --shadow:0 12px 35px rgba(23,43,77,.07);
 }
@@ -24,42 +46,32 @@
 html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{
   font-family:Arial,sans-serif;
-  background:var(--white);
-  color:var(--ink);
-  line-height:1.8;
+  background:white;color:var(--ink);line-height:1.8;
 }
 a{text-decoration:none}
+button,input,textarea,select{font:inherit}
 header{
   position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.96);
+  background:rgba(255,255,255,.97);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
-  padding:15px 7%;
+  padding:14px 7%;
   display:flex;align-items:center;
   justify-content:space-between;gap:20px;
 }
-.logo{
-  font-size:27px;font-weight:900;
-  color:var(--blue);letter-spacing:1px;
-}
+.logo{font-size:27px;font-weight:900;color:var(--blue);letter-spacing:1px}
 .logo span{color:var(--green)}
-nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
 nav a{color:var(--ink);font-size:14px;font-weight:bold}
 nav a:hover{color:var(--blue)}
 button,.btn{
-  border:0;cursor:pointer;
-  display:inline-block;
+  border:0;cursor:pointer;display:inline-block;
   padding:12px 23px;border-radius:10px;
   background:var(--blue);color:white;
-  font-weight:bold;font-size:14px;
-  transition:.25s;
+  font-weight:bold;font-size:14px;transition:.25s;
 }
 button:hover,.btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
-.lang{
-  background:white;color:var(--blue);
-  border:1px solid var(--blue);
-  padding:9px 17px;
-}
+.lang{background:white;color:var(--blue);border:1px solid var(--blue);padding:9px 17px}
 .hero{
   position:relative;overflow:hidden;
   padding:105px 7% 95px;
@@ -74,119 +86,143 @@ button:hover,.btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
 .hero:after{width:200px;height:200px;bottom:-100px;left:-50px}
 .hero-content{position:relative;z-index:1;max-width:850px;margin:auto}
 .eyebrow{
-  display:inline-block;padding:7px 17px;
-  border-radius:30px;background:#dff8f2;
-  color:#078c79;font-size:13px;font-weight:bold;
-  margin-bottom:22px;
+  display:inline-block;padding:7px 17px;border-radius:30px;
+  background:#dff8f2;color:#078c79;
+  font-size:13px;font-weight:bold;margin-bottom:22px;
 }
-.hero h1{
-  font-size:clamp(34px,5vw,55px);
-  line-height:1.4;margin-bottom:20px;
-  color:var(--ink);
-}
+.hero h1{font-size:clamp(34px,5vw,55px);line-height:1.4;margin-bottom:20px}
 .hero h1 span,.section-title span{color:var(--blue)}
-.hero p{
-  color:var(--muted);max-width:680px;
-  margin:0 auto 30px;font-size:17px;
-}
-.hero-actions{
-  display:flex;justify-content:center;
-  gap:13px;flex-wrap:wrap;
-}
-.btn-secondary{
-  background:white;color:var(--blue);
-  border:1px solid #cbdcf7;
-}
+.hero p{color:var(--muted);max-width:680px;margin:0 auto 30px;font-size:17px}
+.hero-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+.btn-secondary{background:white;color:var(--blue);border:1px solid #cbdcf7}
 .btn-secondary:hover{background:#eaf2ff;color:var(--blue)}
-section{padding:80px 7%}
-.section-title{
-  text-align:center;font-size:32px;
-  margin-bottom:12px;color:var(--ink);
-}
-.section-desc{
-  text-align:center;color:var(--muted);
-  max-width:650px;margin:0 auto 42px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:23px;
-}
+section{padding:78px 7%}
+.section-title{text-align:center;font-size:32px;margin-bottom:12px}
+.section-desc{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 42px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:23px}
 .card{
-  background:white;padding:30px;
-  border:1px solid var(--border);
-  border-radius:17px;
-  box-shadow:var(--shadow);
-  transition:.25s;
+  background:white;padding:28px;border:1px solid var(--border);
+  border-radius:17px;box-shadow:var(--shadow);transition:.25s;
 }
-.card:hover{
-  transform:translateY(-6px);
-  border-color:#b8d0ff;
-  box-shadow:0 18px 40px rgba(37,99,235,.10);
-}
+.card:hover{transform:translateY(-5px);border-color:#b8d0ff}
 .card-icon{
-  width:55px;height:55px;border-radius:15px;
-  background:#eaf2ff;
-  display:flex;align-items:center;
-  justify-content:center;font-size:27px;
-  margin-bottom:18px;
+  width:55px;height:55px;border-radius:15px;background:#eaf2ff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:27px;margin-bottom:18px;
 }
-.card h3{color:var(--ink);font-size:19px;margin-bottom:10px}
+.card h3{font-size:19px;margin-bottom:10px}
 .card p{color:var(--muted);font-size:14px}
-.price{
-  font-size:20px;font-weight:bold;
-  color:var(--blue);margin-top:18px;
+.price{font-size:20px;font-weight:bold;color:var(--blue);margin-top:18px}
+
+/* Pricing */
+.pricing{background:var(--bg)}
+.price-card{position:relative;text-align:center}
+.price-card.featured{border:2px solid var(--blue);transform:translateY(-5px)}
+.price-card .price{font-size:27px;margin:15px 0}
+.price-card ul{list-style:none;text-align:right;margin:20px 0}
+.price-card li{padding:7px 0;color:var(--muted);font-size:14px}
+.price-card li:before{content:"✓";color:var(--green);font-weight:bold;margin-left:9px}
+.price-card .btn{width:100%;margin-top:10px}
+.popular{
+  display:inline-block;background:#eaf2ff;color:var(--blue);
+  border-radius:20px;padding:5px 13px;font-size:12px;font-weight:bold;
 }
-.about{
-  background:white;text-align:center;
-}
+
+/* About */
+.about{text-align:center}
 .about-box{
-  max-width:850px;margin:auto;
-  padding:38px;background:var(--bg);
-  border-radius:20px;border:1px solid var(--border);
+  max-width:850px;margin:auto;padding:38px;
+  background:var(--bg);border-radius:20px;border:1px solid var(--border);
 }
 .about-box p{color:var(--muted)}
-.stats{
-  display:flex;justify-content:center;
-  gap:35px;flex-wrap:wrap;margin-top:28px;
-}
+.stats{display:flex;justify-content:center;gap:35px;flex-wrap:wrap;margin-top:28px}
 .stat strong{display:block;color:var(--blue);font-size:23px}
 .stat span{font-size:13px;color:var(--muted)}
+
+/* Testimonials */
+.testimonials{background:#fff}
+.testimonial-card{text-align:center}
+.testimonial-card .quote{font-size:32px;color:var(--green)}
+.testimonial-card p{color:var(--muted);font-size:14px}
+.testimonial-card strong{display:block;margin-top:15px}
+.testimonial-card small{color:var(--muted)}
+.notice{
+  max-width:700px;margin:0 auto 25px;text-align:center;
+  color:var(--muted);font-size:13px;
+  background:var(--bg);padding:12px;border-radius:10px;
+}
+
+/* Contact form */
+.contact-form{
+  max-width:750px;margin:auto;background:white;
+  padding:30px;border:1px solid var(--border);
+  border-radius:18px;box-shadow:var(--shadow);
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.form-group{margin-bottom:17px}
+.form-group label{display:block;font-weight:bold;font-size:14px;margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{
+  width:100%;padding:13px;border:1px solid #dce5f0;
+  border-radius:9px;background:#fff;color:var(--ink);
+  outline:none;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--blue);
+}
+.form-group textarea{min-height:110px;resize:vertical}
+.contact-form button{width:100%;font-size:15px;padding:15px}
+.form-note{text-align:center;color:var(--muted);font-size:12px;margin-top:12px}
+
+/* FAQ */
+.faq{background:var(--bg)}
+.faq-list{max-width:800px;margin:auto}
+details{
+  background:white;border:1px solid var(--border);
+  border-radius:12px;padding:17px 20px;margin-bottom:12px;
+}
+summary{cursor:pointer;font-weight:bold}
+details p{color:var(--muted);font-size:14px;padding-top:12px}
+
+/* CTA */
 .cta{
   background:linear-gradient(120deg,#1d4ed8,#2563eb 60%,#0eaa98);
-  color:white;text-align:center;
-  padding:75px 20px;
+  color:white;text-align:center;padding:75px 20px;
 }
 .cta h2{font-size:32px}
 .cta p{color:#e3edff;margin:12px 0 27px}
 .whatsapp{
-  display:inline-block;background:#20c76a;
-  color:white;padding:14px 27px;
-  border-radius:10px;font-weight:bold;
-  transition:.2s;
+  display:inline-block;background:#20c76a;color:white;
+  padding:14px 27px;border-radius:10px;font-weight:bold;
 }
-.whatsapp:hover{background:#17a957;transform:translateY(-3px)}
-.phone-number{
-  margin-top:18px;color:white;
-  font-weight:bold;direction:ltr;
-}
+.whatsapp:hover{background:#17a957}
+.phone-number{margin-top:18px;color:white;font-weight:bold;direction:ltr}
 footer{
-  background:#f8fafc;text-align:center;
-  padding:25px;color:var(--muted);
-  font-size:13px;border-top:1px solid var(--border);
+  background:#f8fafc;text-align:center;padding:25px;
+  color:var(--muted);font-size:13px;border-top:1px solid var(--border);
 }
+.floating-whatsapp{
+  position:fixed;bottom:22px;right:22px;z-index:200;
+  width:58px;height:58px;border-radius:50%;
+  background:#20c76a;color:white;display:flex;
+  align-items:center;justify-content:center;
+  font-size:27px;box-shadow:0 5px 20px #0002;
+}
+.floating-whatsapp:hover{transform:scale(1.08);background:#17a957}
 @media(max-width:700px){
   header{padding:13px 5%;flex-wrap:wrap}
   .logo{font-size:24px}
-  nav{order:3;width:100%;gap:13px}
-  nav a{font-size:13px}
+  nav{order:3;width:100%;gap:12px}
+  nav a{font-size:12px}
   .hero{padding:75px 6%}
   .hero p{font-size:15px}
-  section{padding:60px 6%}
+  section{padding:58px 6%}
   .section-title{font-size:27px}
-  .card{padding:24px}
+  .card{padding:23px}
   .about-box{padding:25px}
   .cta h2{font-size:26px}
+  .form-grid{grid-template-columns:1fr}
+  .contact-form{padding:20px}
+  .price-card.featured{transform:none}
 }
 </style>
 </head>
@@ -198,6 +234,7 @@ footer{
   <nav>
     <a href="#home" data-ar="الرئيسية" data-fr="Accueil">الرئيسية</a>
     <a href="#services" data-ar="خدماتنا" data-fr="Services">خدماتنا</a>
+    <a href="#pricing" data-ar="الأسعار" data-fr="Tarifs">الأسعار</a>
     <a href="#about" data-ar="من نحن" data-fr="À propos">من نحن</a>
     <a href="#contact" data-ar="اتصل بنا" data-fr="Contact">اتصل بنا</a>
   </nav>
@@ -206,6 +243,7 @@ footer{
 
 <main>
 
+<!-- HERO -->
 <div class="hero" id="home">
   <div class="hero-content">
     <span class="eyebrow"
@@ -225,120 +263,218 @@ footer{
     </p>
 
     <div class="hero-actions">
-      <a class="btn" href="#services"
-         data-ar="اكتشف خدماتنا"
-         data-fr="Découvrir nos services">اكتشف خدماتنا</a>
-
-      <a class="btn btn-secondary"
-         href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio"
-         target="_blank" rel="noopener"
-         data-ar="تواصل معنا"
-         data-fr="Nous contacter">تواصل معنا</a>
+      <a class="btn" href="#services" data-ar="اكتشف خدماتنا" data-fr="Découvrir nos services">اكتشف خدماتنا</a>
+      <a class="btn btn-secondary" href="#contact" data-ar="اطلب عرض السعر" data-fr="Demander un devis">اطلب عرض السعر</a>
     </div>
   </div>
 </div>
 
+<!-- SERVICES -->
 <section id="services">
-  <h2 class="section-title"
-      data-ar="خدماتنا <span>الرقمية</span>"
-      data-fr="Nos <span>services</span>">
-    خدماتنا <span>الرقمية</span>
-  </h2>
-
-  <p class="section-desc"
-     data-ar="نقدم حلولاً عملية تساعد مشروعك على النمو والتميز على الإنترنت."
-     data-fr="Des solutions pratiques pour développer votre présence en ligne.">
-    نقدم حلولاً عملية تساعد مشروعك على النمو والتميز على الإنترنت.
-  </p>
+  <h2 class="section-title" data-ar="خدماتنا <span>الرقمية</span>" data-fr="Nos <span>services</span>">خدماتنا <span>الرقمية</span></h2>
+  <p class="section-desc" data-ar="نقدم حلولاً عملية تساعد مشروعك على النمو والتميز على الإنترنت." data-fr="Des solutions pratiques pour développer votre présence en ligne.">نقدم حلولاً عملية تساعد مشروعك على النمو والتميز على الإنترنت.</p>
 
   <div class="grid">
     <div class="card">
       <div class="card-icon">🌐</div>
       <h3 data-ar="تصميم المواقع" data-fr="Création de sites web">تصميم المواقع</h3>
-      <p data-ar="مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع."
-         data-fr="Sites professionnels et adaptés aux entreprises et commerces.">
-        مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع.
-      </p>
-      <div class="price">À partir de 900 DH</div>
+      <p data-ar="مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع." data-fr="Sites professionnels et adaptés aux entreprises et commerces.">مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع.</p>
+      <div class="price" data-ar="ابتداءً من 900 DH" data-fr="À partir de 900 DH">ابتداءً من 900 DH</div>
     </div>
 
     <div class="card">
       <div class="card-icon">📱</div>
       <h3 data-ar="تطبيقات الهاتف" data-fr="Applications mobiles">تطبيقات الهاتف</h3>
-      <p data-ar="تطبيقات Android عملية حسب احتياجات مشروعك."
-         data-fr="Applications Android adaptées aux besoins de votre activité.">
-        تطبيقات Android عملية حسب احتياجات مشروعك.
-      </p>
+      <p data-ar="تطبيقات Android عملية حسب احتياجات مشروعك." data-fr="Applications Android adaptées aux besoins de votre activité.">تطبيقات Android عملية حسب احتياجات مشروعك.</p>
       <div class="price" data-ar="حسب المشروع" data-fr="Sur devis">حسب المشروع</div>
     </div>
 
     <div class="card">
       <div class="card-icon">🛍️</div>
       <h3 data-ar="الكتالوج الإلكتروني" data-fr="Catalogue digital">الكتالوج الإلكتروني</h3>
-      <p data-ar="عرض منتجاتك وخدماتك بطريقة منظمة وسهلة."
-         data-fr="Présentez vos produits et services clairement.">
-        عرض منتجاتك وخدماتك بطريقة منظمة وسهلة.
-      </p>
-      <div class="price">À partir de 600 DH</div>
+      <p data-ar="عرض منتجاتك وخدماتك بطريقة منظمة وسهلة." data-fr="Présentez vos produits et services clairement.">عرض منتجاتك وخدماتك بطريقة منظمة وسهلة.</p>
+      <div class="price" data-ar="ابتداءً من 600 DH" data-fr="À partir de 600 DH">ابتداءً من 600 DH</div>
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
-  <h2 class="section-title"
-      data-ar="من <span>نحن؟</span>"
-      data-fr="Qui <span>sommes-nous ?</span>">
-    من <span>نحن؟</span>
-  </h2>
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <h2 class="section-title" data-ar="باقات <span>الأسعار</span>" data-fr="Nos <span>tarifs</span>">باقات <span>الأسعار</span></h2>
+  <p class="section-desc" data-ar="اختار الباقة المناسبة لمشروعك. الأثمنة تقديرية ويمكن تخصيص العرض حسب احتياجاتك." data-fr="Choisissez la formule adaptée à votre projet. Les tarifs sont indicatifs et peuvent être adaptés à vos besoins.">اختار الباقة المناسبة لمشروعك. الأثمنة تقديرية ويمكن تخصيص العرض حسب احتياجاتك.</p>
 
-  <p class="section-desc"
-     data-ar="نعمل على تقديم حلول رقمية بسيطة وعصرية تساعد المقاولات والمشاريع على تطوير حضورها."
-     data-fr="Nous proposons des solutions numériques modernes pour aider les entreprises à développer leur présence.">
-    نعمل على تقديم حلول رقمية بسيطة وعصرية تساعد المقاولات والمشاريع على تطوير حضورها.
-  </p>
+  <div class="grid">
+    <div class="card price-card">
+      <h3 data-ar="Basic" data-fr="Basic">Basic</h3>
+      <div class="price">900 DH</div>
+      <p data-ar="للمشاريع الصغيرة والبداية" data-fr="Pour les petits projets">للمشاريع الصغيرة والبداية</p>
+      <ul>
+        <li data-ar="موقع تعريفي بسيط" data-fr="Site vitrine simple">موقع تعريفي بسيط</li>
+        <li data-ar="تصميم متجاوب مع الهاتف" data-fr="Design adapté au mobile">تصميم متجاوب مع الهاتف</li>
+        <li data-ar="معلومات الاتصال وWhatsApp" data-fr="Contact et WhatsApp">معلومات الاتصال وWhatsApp</li>
+        <li data-ar="تهيئة SEO أساسية" data-fr="SEO de base">تهيئة SEO أساسية</li>
+      </ul>
+      <a class="btn" href="#contact" data-ar="اطلب هذه الباقة" data-fr="Choisir cette formule">اطلب هذه الباقة</a>
+    </div>
+
+    <div class="card price-card featured">
+      <span class="popular" data-ar="اختيار مميز" data-fr="Populaire">اختيار مميز</span>
+      <h3 data-ar="Professional" data-fr="Professional">Professional</h3>
+      <div class="price">1500 DH</div>
+      <p data-ar="للمقاولات والأنشطة التجارية" data-fr="Pour les entreprises et commerces">للمقاولات والأنشطة التجارية</p>
+      <ul>
+        <li data-ar="موقع متعدد الأقسام" data-fr="Site avec plusieurs sections">موقع متعدد الأقسام</li>
+        <li data-ar="تصميم احترافي ومتجاوب" data-fr="Design professionnel responsive">تصميم احترافي ومتجاوب</li>
+        <li data-ar="نموذج طلب معلومات" data-fr="Formulaire de contact">نموذج طلب معلومات</li>
+        <li data-ar="تهيئة SEO أساسية" data-fr="SEO de base">تهيئة SEO أساسية</li>
+        <li data-ar="ربط WhatsApp" data-fr="Intégration WhatsApp">ربط WhatsApp</li>
+      </ul>
+      <a class="btn" href="#contact" data-ar="اطلب هذه الباقة" data-fr="Choisir cette formule">اطلب هذه الباقة</a>
+    </div>
+
+    <div class="card price-card">
+      <h3 data-ar="Premium" data-fr="Premium">Premium</h3>
+      <div class="price" data-ar="حسب المشروع" data-fr="Sur devis">حسب المشروع</div>
+      <p data-ar="للمشاريع ذات المتطلبات الخاصة" data-fr="Pour les projets personnalisés">للمشاريع ذات المتطلبات الخاصة</p>
+      <ul>
+        <li data-ar="تصميم مخصص بالكامل" data-fr="Design entièrement personnalisé">تصميم مخصص بالكامل</li>
+        <li data-ar="وظائف إضافية حسب الطلب" data-fr="Fonctionnalités sur mesure">وظائف إضافية حسب الطلب</li>
+        <li data-ar="تطبيقات Android عند الطلب" data-fr="Applications Android sur demande">تطبيقات Android عند الطلب</li>
+        <li data-ar="دراسة احتياجات المشروع" data-fr="Étude des besoins du projet">دراسة احتياجات المشروع</li>
+      </ul>
+      <a class="btn" href="#contact" data-ar="اطلب عرضاً خاصاً" data-fr="Demander un devis">اطلب عرضاً خاصاً</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2 class="section-title" data-ar="من <span>نحن؟</span>" data-fr="Qui <span>sommes-nous ?</span>">من <span>نحن؟</span></h2>
+  <p class="section-desc" data-ar="نعمل على تقديم حلول رقمية بسيطة وعصرية تساعد المقاولات والمشاريع على تطوير حضورها." data-fr="Nous proposons des solutions numériques modernes pour aider les entreprises à développer leur présence.">نعمل على تقديم حلول رقمية بسيطة وعصرية تساعد المقاولات والمشاريع على تطوير حضورها.</p>
 
   <div class="about-box">
     <p data-ar="DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة. نركز على الجودة والبساطة وتجربة المستخدم."
        data-fr="DARBYTE Studio accompagne les petites et moyennes entreprises dans leur transformation digitale grâce aux sites web, applications et solutions innovantes. Nous privilégions la qualité, la simplicité et l'expérience utilisateur.">
       DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة. نركز على الجودة والبساطة وتجربة المستخدم.
     </p>
-
     <div class="stats">
-      <div class="stat">
-        <strong>100%</strong>
-        <span data-ar="اهتمام بالجودة" data-fr="Priorité à la qualité">اهتمام بالجودة</span>
-      </div>
-      <div class="stat">
-        <strong>24/7</strong>
-        <span data-ar="تواصل عبر الإنترنت" data-fr="Contact en ligne">تواصل عبر الإنترنت</span>
-      </div>
-      <div class="stat">
-        <strong>Mobile</strong>
-        <span data-ar="تصميم متجاوب" data-fr="Design responsive">تصميم متجاوب</span>
-      </div>
+      <div class="stat"><strong>100%</strong><span data-ar="اهتمام بالجودة" data-fr="Priorité à la qualité">اهتمام بالجودة</span></div>
+      <div class="stat"><strong>24/7</strong><span data-ar="تواصل عبر الإنترنت" data-fr="Contact en ligne">تواصل عبر الإنترنت</span></div>
+      <div class="stat"><strong>Mobile</strong><span data-ar="تصميم متجاوب" data-fr="Design responsive">تصميم متجاوب</span></div>
     </div>
   </div>
 </section>
 
-<section class="cta" id="contact">
-  <h2 data-ar="عندك فكرة؟ لنبدأ العمل عليها!"
-      data-fr="Un projet ? Parlons-en !">
-    عندك فكرة؟ لنبدأ العمل عليها!
-  </h2>
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <h2 class="section-title" data-ar="آراء <span>الزبناء</span>" data-fr="Avis de nos <span>clients</span>">آراء <span>الزبناء</span></h2>
+  <p class="section-desc" data-ar="ثقة الزبناء ورضاهم هما أساس نجاحنا." data-fr="La confiance et la satisfaction de nos clients sont essentielles.">ثقة الزبناء ورضاهم هما أساس نجاحنا.</p>
 
-  <p data-ar="تواصل معنا للحصول على عرض مناسب لمشروعك."
-     data-fr="Contactez-nous pour discuter de votre projet.">
-    تواصل معنا للحصول على عرض مناسب لمشروعك.
-  </p>
+  <div class="notice" data-ar="نعمل حالياً على جمع أول تقييمات عملائنا. ستظهر هنا آراء حقيقية بعد إنجاز المشاريع." data-fr="Nous recueillons actuellement les premiers avis de nos clients. Les témoignages réels seront publiés ici après les projets.">
+    نعمل حالياً على جمع أول تقييمات عملائنا. ستظهر هنا آراء حقيقية بعد إنجاز المشاريع.
+  </div>
 
-  <a class="whatsapp"
-     href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio%2C%20bghit%20n3ref%20aktar%203la%20khadamatkom."
-     target="_blank" rel="noopener"
-     data-ar="🟢 تواصل معنا عبر WhatsApp"
-     data-fr="🟢 Contactez-nous sur WhatsApp">
-    🟢 تواصل معنا عبر WhatsApp
-  </a>
+  <div class="grid">
+    <div class="card testimonial-card">
+      <div class="quote">“</div>
+      <p data-ar="نسعى إلى تقديم تجربة احترافية وخدمة واضحة من أول تواصل إلى تسليم المشروع." data-fr="Nous visons une expérience professionnelle et un accompagnement clair, du premier contact à la livraison.">نسعى إلى تقديم تجربة احترافية وخدمة واضحة من أول تواصل إلى تسليم المشروع.</p>
+      <strong>DARBYTE Studio</strong>
+      <small data-ar="التزامنا تجاه الزبناء" data-fr="Notre engagement">التزامنا تجاه الزبناء</small>
+    </div>
+  </div>
+</section>
 
+<!-- CONTACT FORM -->
+<section id="contact">
+  <h2 class="section-title" data-ar="اطلب <span>عرض السعر</span>" data-fr="Demandez un <span>devis</span>">اطلب <span>عرض السعر</span></h2>
+  <p class="section-desc" data-ar="عمر المعلومات التالية وسنتوصل برسالتك مباشرة عبر WhatsApp." data-fr="Remplissez les informations ci-dessous pour nous envoyer votre demande sur WhatsApp.">عمر المعلومات التالية وسنتوصل برسالتك مباشرة عبر WhatsApp.</p>
+
+  <form class="contact-form" id="quoteForm">
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="clientName" data-ar="الاسم الكامل" data-fr="Nom complet">الاسم الكامل</label>
+        <input id="clientName" name="name" required maxlength="80" placeholder="الاسم الكامل">
+      </div>
+
+      <div class="form-group">
+        <label for="clientPhone" data-ar="رقم الهاتف" data-fr="Téléphone">رقم الهاتف</label>
+        <input id="clientPhone" name="phone" required type="tel" maxlength="25" placeholder="06XXXXXXXX">
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="projectType" data-ar="نوع الخدمة" data-fr="Type de service">نوع الخدمة</label>
+        <select id="projectType" name="service" required>
+          <option value="" data-ar="اختر الخدمة" data-fr="Choisir un service">اختر الخدمة</option>
+          <option value="Website" data-ar="تصميم موقع إلكتروني" data-fr="Création de site web">تصميم موقع إلكتروني</option>
+          <option value="Android App" data-ar="تطبيق Android" data-fr="Application Android">تطبيق Android</option>
+          <option value="Digital Catalogue" data-ar="كتالوج إلكتروني" data-fr="Catalogue digital">كتالوج إلكتروني</option>
+          <option value="Other" data-ar="خدمة أخرى" data-fr="Autre service">خدمة أخرى</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="budget" data-ar="الميزانية التقريبية" data-fr="Budget estimé">الميزانية التقريبية</label>
+        <select id="budget" name="budget" required>
+          <option value="" data-ar="اختر الميزانية" data-fr="Choisir un budget">اختر الميزانية</option>
+          <option value="Under 1000 DH">Moins de 1000 DH</option>
+          <option value="1000 - 2000 DH">1000 - 2000 DH</option>
+          <option value="2000 - 5000 DH">2000 - 5000 DH</option>
+          <option value="More than 5000 DH">Plus de 5000 DH</option>
+          <option value="To discuss">À discuter</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="projectDetails" data-ar="تفاصيل المشروع" data-fr="Détails du projet">تفاصيل المشروع</label>
+      <textarea id="projectDetails" name="details" maxlength="1000" placeholder="شرح لينا شنو محتاج..." required></textarea>
+    </div>
+
+    <button type="submit" data-ar="إرسال الطلب عبر WhatsApp" data-fr="Envoyer la demande sur WhatsApp">إرسال الطلب عبر WhatsApp</button>
+    <p class="form-note" data-ar="سيتم فتح WhatsApp برسالتك جاهزة للإرسال. لن يتم إرسالها تلقائياً." data-fr="WhatsApp s'ouvrira avec votre message prêt à être envoyé. L'envoi ne sera pas automatique.">سيتم فتح WhatsApp برسالتك جاهزة للإرسال. لن يتم إرسالها تلقائياً.</p>
+  </form>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <h2 class="section-title" data-ar="الأسئلة <span>الشائعة</span>" data-fr="Questions <span>fréquentes</span>">الأسئلة <span>الشائعة</span></h2>
+  <p class="section-desc" data-ar="إليك بعض الأجوبة على الأسئلة التي قد تهمك." data-fr="Voici les réponses aux questions les plus fréquentes.">إليك بعض الأجوبة على الأسئلة التي قد تهمك.</p>
+
+  <div class="faq-list">
+    <details>
+      <summary data-ar="شحال كتاخد مدة إنجاز الموقع؟" data-fr="Combien de temps faut-il pour créer un site ?">شحال كتاخد مدة إنجاز الموقع؟</summary>
+      <p data-ar="المدة كتختلف حسب حجم المشروع والخصائص المطلوبة. كنحددوها معاك قبل بداية العمل." data-fr="Le délai dépend de la taille du projet et des fonctionnalités demandées. Nous le définissons avant le début du travail.">المدة كتختلف حسب حجم المشروع والخصائص المطلوبة. كنحددوها معاك قبل بداية العمل.</p>
+    </details>
+
+    <details>
+      <summary data-ar="واش الموقع كيخدم فالهاتف؟" data-fr="Le site sera-t-il adapté au téléphone ?">واش الموقع كيخدم فالهاتف؟</summary>
+      <p data-ar="نعم، كنحرصو على تصميم متجاوب مع الهواتف والحواسيب." data-fr="Oui, nous veillons à ce que le site soit adapté aux téléphones et aux ordinateurs.">نعم، كنحرصو على تصميم متجاوب مع الهواتف والحواسيب.</p>
+    </details>
+
+    <details>
+      <summary data-ar="كيفاش نقدر نطلب الخدمة؟" data-fr="Comment commander un service ?">كيفاش نقدر نطلب الخدمة؟</summary>
+      <p data-ar="عمر فورم طلب عرض السعر أو تواصل معنا مباشرة عبر WhatsApp." data-fr="Remplissez le formulaire de devis ou contactez-nous directement sur WhatsApp.">عمر فورم طلب عرض السعر أو تواصل معنا مباشرة عبر WhatsApp.</p>
+    </details>
+
+    <details>
+      <summary data-ar="واش الأثمنة ثابتة؟" data-fr="Les tarifs sont-ils fixes ?">واش الأثمنة ثابتة؟</summary>
+      <p data-ar="الأثمنة المعروضة ابتدائية أو تقديرية. الثمن النهائي كيتحدد حسب تفاصيل المشروع." data-fr="Les tarifs affichés sont indicatifs ou à partir de. Le prix final dépend des besoins du projet.">الأثمنة المعروضة ابتدائية أو تقديرية. الثمن النهائي كيتحدد حسب تفاصيل المشروع.</p>
+    </details>
+
+    <details>
+      <summary data-ar="واش كتقدمو تطبيقات Android؟" data-fr="Proposez-vous des applications Android ?">واش كتقدمو تطبيقات Android؟</summary>
+      <p data-ar="نعم، يمكننا دراسة طلبك وتحديد الخصائص والتكلفة حسب التطبيق المطلوب." data-fr="Oui, nous pouvons étudier votre demande et définir les fonctionnalités et le coût selon l'application souhaitée.">نعم، يمكننا دراسة طلبك وتحديد الخصائص والتكلفة حسب التطبيق المطلوب.</p>
+    </details>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta">
+  <h2 data-ar="عندك فكرة؟ لنبدأ العمل عليها!" data-fr="Un projet ? Parlons-en !">عندك فكرة؟ لنبدأ العمل عليها!</h2>
+  <p data-ar="تواصل معنا للحصول على عرض مناسب لمشروعك." data-fr="Contactez-nous pour discuter de votre projet.">تواصل معنا للحصول على عرض مناسب لمشروعك.</p>
+  <a class="whatsapp" href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio" target="_blank" rel="noopener" data-ar="🟢 تواصل معنا عبر WhatsApp" data-fr="🟢 Contactez-nous sur WhatsApp">🟢 تواصل معنا عبر WhatsApp</a>
   <p class="phone-number">WhatsApp: +212 611 659 452</p>
 </section>
 
@@ -347,6 +483,12 @@ footer{
 <footer>
   © 2026 DARBYTE Studio. All rights reserved.
 </footer>
+
+<!-- FLOATING WHATSAPP -->
+<a class="floating-whatsapp"
+   href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio"
+   target="_blank" rel="noopener"
+   aria-label="Contact DARBYTE Studio on WhatsApp">☏</a>
 
 <script>
 let lang="ar";
@@ -361,9 +503,54 @@ function changeLang(){
     lang==="ar"?"FR":"AR";
 
   document.querySelectorAll("[data-ar]").forEach(el=>{
-    el.innerHTML=el.getAttribute("data-"+lang);
+    const value=el.getAttribute("data-"+lang);
+    if(value!==null){
+      if(el.tagName==="OPTION"){
+        el.textContent=value;
+      }else{
+        el.innerHTML=value;
+      }
+    }
+  });
+
+  document.querySelectorAll("[data-placeholder-ar]").forEach(el=>{
+    el.placeholder=el.getAttribute("data-placeholder-"+lang);
   });
 }
+
+// Send quote request to WhatsApp
+document.getElementById("quoteForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const name=document.getElementById("clientName").value.trim();
+  const phone=document.getElementById("clientPhone").value.trim();
+  const service=document.getElementById("projectType").value;
+  const budget=document.getElementById("budget").value;
+  const details=document.getElementById("projectDetails").value.trim();
+
+  if(!name || !phone || !service || !budget || !details){
+    alert(lang==="ar"?"يرجى ملء جميع المعلومات.":"Veuillez remplir tous les champs.");
+    return;
+  }
+
+  const message=
+`Bonjour DARBYTE Studio,
+
+Nouvelle demande de devis :
+
+Nom : ${name}
+Téléphone : ${phone}
+Service : ${service}
+Budget : ${budget}
+
+Détails du projet :
+${details}
+
+Merci.`;
+
+  const url="https://wa.me/212611659452?text="+encodeURIComponent(message);
+  window.open(url,"_blank");
+});
 </script>
 
 </body>
