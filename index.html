@@ -1,171 +1,200 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0c1424">
-<meta name="description" content="DARBYTE Studio - Professional websites, mobile applications and digital solutions in Morocco.">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="DARBYTE Studio - Web design, mobile apps and digital solutions in Morocco.">
 <title>DARBYTE Studio | Digital Agency</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-font-family:Arial,sans-serif;
-background:#0c1424;
-color:#f4f7fb;
-line-height:1.8
+:root{
+  --blue:#2563eb;
+  --blue-dark:#1746b0;
+  --green:#12bfa5;
+  --ink:#172b4d;
+  --muted:#64748b;
+  --bg:#f3f7fc;
+  --white:#ffffff;
+  --border:#e5edf6;
+  --shadow:0 12px 35px rgba(23,43,77,.07);
 }
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  font-family:Arial,sans-serif;
+  background:var(--white);
+  color:var(--ink);
+  line-height:1.8;
+}
+a{text-decoration:none}
 header{
-padding:18px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #26344a;
-background:#101b2d;
-position:sticky;
-top:0;
-z-index:10
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:15px 7%;
+  display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
 }
 .logo{
-font-size:25px;
-font-weight:bold;
-color:#42d6ad;
-letter-spacing:1px
+  font-size:27px;font-weight:900;
+  color:var(--blue);letter-spacing:1px;
 }
-nav{display:flex;gap:20px;flex-wrap:wrap}
-nav a{
-color:#dce5ef;
-text-decoration:none;
-font-size:14px
-}
-nav a:hover{color:#42d6ad}
+.logo span{color:var(--green)}
+nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+nav a{color:var(--ink);font-size:14px;font-weight:bold}
+nav a:hover{color:var(--blue)}
 button,.btn{
-background:#42d6ad;
-color:#0c1424;
-border:0;
-padding:12px 22px;
-border-radius:8px;
-font-weight:bold;
-cursor:pointer;
-text-decoration:none;
-display:inline-block
+  border:0;cursor:pointer;
+  display:inline-block;
+  padding:12px 23px;border-radius:10px;
+  background:var(--blue);color:white;
+  font-weight:bold;font-size:14px;
+  transition:.25s;
 }
-button:hover,.btn:hover{background:#70e9c5}
+button:hover,.btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
 .lang{
-background:transparent;
-border:1px solid #42d6ad;
-color:#42d6ad
+  background:white;color:var(--blue);
+  border:1px solid var(--blue);
+  padding:9px 17px;
 }
 .hero{
-text-align:center;
-padding:100px 20px;
-background:radial-gradient(ellipse at top,#1b3950,#0c1424 75%)
+  position:relative;overflow:hidden;
+  padding:105px 7% 95px;
+  background:linear-gradient(135deg,#eff6ff,#f0fdfa 75%,#fff);
+  text-align:center;
+}
+.hero:before,.hero:after{
+  content:"";position:absolute;border-radius:50%;
+  background:rgba(37,99,235,.07);
+}
+.hero:before{width:260px;height:260px;top:-100px;right:-80px}
+.hero:after{width:200px;height:200px;bottom:-100px;left:-50px}
+.hero-content{position:relative;z-index:1;max-width:850px;margin:auto}
+.eyebrow{
+  display:inline-block;padding:7px 17px;
+  border-radius:30px;background:#dff8f2;
+  color:#078c79;font-size:13px;font-weight:bold;
+  margin-bottom:22px;
 }
 .hero h1{
-font-size:43px;
-line-height:1.4;
-margin-bottom:20px
+  font-size:clamp(34px,5vw,55px);
+  line-height:1.4;margin-bottom:20px;
+  color:var(--ink);
 }
-.hero h1 span,.section-title span{color:#42d6ad}
+.hero h1 span,.section-title span{color:var(--blue)}
 .hero p{
-color:#b5c4d5;
-max-width:650px;
-margin:0 auto 30px
+  color:var(--muted);max-width:680px;
+  margin:0 auto 30px;font-size:17px;
 }
 .hero-actions{
-display:flex;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap
+  display:flex;justify-content:center;
+  gap:13px;flex-wrap:wrap;
 }
-.btn-outline{
-border:1px solid #42d6ad;
-color:#42d6ad;
-padding:11px 22px;
-border-radius:8px;
-text-decoration:none
+.btn-secondary{
+  background:white;color:var(--blue);
+  border:1px solid #cbdcf7;
 }
-section{padding:70px 7%}
+.btn-secondary:hover{background:#eaf2ff;color:var(--blue)}
+section{padding:80px 7%}
 .section-title{
-text-align:center;
-font-size:30px;
-margin-bottom:38px
+  text-align:center;font-size:32px;
+  margin-bottom:12px;color:var(--ink);
+}
+.section-desc{
+  text-align:center;color:var(--muted);
+  max-width:650px;margin:0 auto 42px;
 }
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:22px
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:23px;
 }
 .card{
-background:#172439;
-padding:27px;
-border:1px solid #293c52;
-border-radius:14px;
-transition:.2s
+  background:white;padding:30px;
+  border:1px solid var(--border);
+  border-radius:17px;
+  box-shadow:var(--shadow);
+  transition:.25s;
 }
 .card:hover{
-transform:translateY(-5px);
-border-color:#42d6ad
+  transform:translateY(-6px);
+  border-color:#b8d0ff;
+  box-shadow:0 18px 40px rgba(37,99,235,.10);
 }
-.card h3{color:#42d6ad;margin-bottom:12px}
-.card p{color:#bdc9d7;font-size:14px}
+.card-icon{
+  width:55px;height:55px;border-radius:15px;
+  background:#eaf2ff;
+  display:flex;align-items:center;
+  justify-content:center;font-size:27px;
+  margin-bottom:18px;
+}
+.card h3{color:var(--ink);font-size:19px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:14px}
 .price{
-font-size:21px;
-font-weight:bold;
-margin-top:18px;
-color:#42d6ad
+  font-size:20px;font-weight:bold;
+  color:var(--blue);margin-top:18px;
 }
-.about{
-text-align:center;
-background:#111e32
-}
-.about p{
-max-width:750px;
-margin:auto;
-color:#bdc9d7
-}
-.projects{background:#0e192a}
+.projects{background:var(--bg)}
 .project-tag{
-display:inline-block;
-color:#42d6ad;
-background:#203b42;
-padding:4px 12px;
-border-radius:20px;
-font-size:12px;
-margin-bottom:12px
+  display:inline-block;color:#078c79;
+  background:#ddf8f1;padding:5px 13px;
+  border-radius:30px;font-size:12px;
+  font-weight:bold;margin-bottom:15px;
 }
+.project-card{min-height:210px}
+.project-card h3{font-size:20px}
+.about{
+  background:white;text-align:center;
+}
+.about-box{
+  max-width:850px;margin:auto;
+  padding:38px;background:var(--bg);
+  border-radius:20px;border:1px solid var(--border);
+}
+.about-box p{color:var(--muted)}
+.stats{
+  display:flex;justify-content:center;
+  gap:35px;flex-wrap:wrap;margin-top:28px;
+}
+.stat strong{display:block;color:var(--blue);font-size:23px}
+.stat span{font-size:13px;color:var(--muted)}
 .cta{
-text-align:center;
-background:#142c3c;
-padding:65px 20px
+  background:linear-gradient(120deg,#1d4ed8,#2563eb 60%,#0eaa98);
+  color:white;text-align:center;
+  padding:75px 20px;
 }
-.cta p{color:#c4d1df;margin:12px 0 25px}
+.cta h2{font-size:32px}
+.cta p{color:#e3edff;margin:12px 0 27px}
 .whatsapp{
-background:#25D366;
-color:white;
-padding:14px 25px;
-border-radius:9px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block
+  display:inline-block;background:#20c76a;
+  color:white;padding:14px 27px;
+  border-radius:10px;font-weight:bold;
+  transition:.2s;
 }
-.whatsapp:hover{background:#1db954}
+.whatsapp:hover{background:#17a957;transform:translateY(-3px)}
+.phone-number{
+  margin-top:18px;color:white;
+  font-weight:bold;direction:ltr;
+}
 footer{
-text-align:center;
-padding:25px;
-color:#899caf;
-font-size:13px;
-border-top:1px solid #26344a
+  background:#f8fafc;text-align:center;
+  padding:25px;color:var(--muted);
+  font-size:13px;border-top:1px solid var(--border);
 }
-@media(max-width:650px){
-header{flex-wrap:wrap;gap:15px}
-nav{width:100%;gap:14px}
-.hero{padding:70px 18px}
-.hero h1{font-size:32px}
-section{padding:50px 6%}
-.section-title{font-size:26px}
+@media(max-width:700px){
+  header{padding:13px 5%;flex-wrap:wrap}
+  .logo{font-size:24px}
+  nav{order:3;width:100%;gap:13px}
+  nav a{font-size:13px}
+  .hero{padding:75px 6%}
+  .hero p{font-size:15px}
+  section{padding:60px 6%}
+  .section-title{font-size:27px}
+  .card{padding:24px}
+  .about-box{padding:25px}
+  .cta h2{font-size:26px}
 }
 </style>
 </head>
@@ -173,173 +202,224 @@ section{padding:50px 6%}
 <body>
 
 <header>
-<div class="logo">DARBYTE.</div>
+  <div class="logo">DARBYTE<span>.</span></div>
 
-<nav>
-<a href="#home" data-ar="الرئيسية" data-fr="Accueil">الرئيسية</a>
-<a href="#services" data-ar="خدماتنا" data-fr="Services">خدماتنا</a>
-<a href="#projects" data-ar="أعمالنا" data-fr="Projets">أعمالنا</a>
-<a href="#about" data-ar="من نحن" data-fr="À propos">من نحن</a>
-<a href="#contact" data-ar="اتصل بنا" data-fr="Contact">اتصل بنا</a>
-</nav>
+  <nav>
+    <a href="#home" data-ar="الرئيسية" data-fr="Accueil">الرئيسية</a>
+    <a href="#services" data-ar="خدماتنا" data-fr="Services">خدماتنا</a>
+    <a href="#projects" data-ar="أعمالنا" data-fr="Projets">أعمالنا</a>
+    <a href="#about" data-ar="من نحن" data-fr="À propos">من نحن</a>
+    <a href="#contact" data-ar="اتصل بنا" data-fr="Contact">اتصل بنا</a>
+  </nav>
 
-<button class="lang" onclick="changeLang()">FR</button>
+  <button class="lang" onclick="changeLang()">FR</button>
 </header>
 
 <main>
 
 <div class="hero" id="home">
-<h1 data-ar="نحوّل أفكارك إلى <span>حلول رقمية</span>"
-data-fr="Transformons vos idées en <span>solutions digitales</span>">
-نحوّل أفكارك إلى <span>حلول رقمية</span>
-</h1>
+  <div class="hero-content">
+    <span class="eyebrow"
+      data-ar="حلول رقمية عصرية للمستقبل"
+      data-fr="Des solutions digitales pour demain">
+      حلول رقمية عصرية للمستقبل
+    </span>
 
-<p data-ar="DARBYTE Studio شريكك الرقمي لإنشاء مواقع إلكترونية احترافية، تطبيقات الهاتف والحلول التقنية العصرية."
-data-fr="DARBYTE Studio, votre partenaire pour créer des sites web professionnels, applications mobiles et solutions numériques modernes.">
-DARBYTE Studio شريكك الرقمي لإنشاء مواقع إلكترونية احترافية، تطبيقات الهاتف والحلول التقنية العصرية.
-</p>
+    <h1 data-ar="نحوّل أفكارك إلى <span>حلول رقمية</span>"
+        data-fr="Transformons vos idées en <span>solutions digitales</span>">
+      نحوّل أفكارك إلى <span>حلول رقمية</span>
+    </h1>
 
-<div class="hero-actions">
-<a class="btn" href="#services" data-ar="اكتشف خدماتنا" data-fr="Découvrir nos services">اكتشف خدماتنا</a>
+    <p data-ar="DARBYTE Studio شريكك الرقمي لإنشاء مواقع إلكترونية احترافية، تطبيقات الهاتف والحلول التقنية العصرية لمشروعك."
+       data-fr="DARBYTE Studio, votre partenaire pour créer des sites web professionnels, applications mobiles et solutions numériques modernes.">
+      DARBYTE Studio شريكك الرقمي لإنشاء مواقع إلكترونية احترافية، تطبيقات الهاتف والحلول التقنية العصرية لمشروعك.
+    </p>
 
-<a class="btn-outline" href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio"
-target="_blank" rel="noopener"
-data-ar="تواصل معنا" data-fr="Nous contacter">تواصل معنا</a>
-</div>
+    <div class="hero-actions">
+      <a class="btn" href="#services"
+         data-ar="اكتشف خدماتنا"
+         data-fr="Découvrir nos services">اكتشف خدماتنا</a>
+
+      <a class="btn btn-secondary"
+         href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio"
+         target="_blank" rel="noopener"
+         data-ar="تواصل معنا"
+         data-fr="Nous contacter">تواصل معنا</a>
+    </div>
+  </div>
 </div>
 
 <section id="services">
-<h2 class="section-title"
-data-ar="خدماتنا <span>الرقمية</span>"
-data-fr="Nos <span>services</span>">
-خدماتنا <span>الرقمية</span>
-</h2>
+  <h2 class="section-title"
+      data-ar="خدماتنا <span>الرقمية</span>"
+      data-fr="Nos <span>services</span>">
+    خدماتنا <span>الرقمية</span>
+  </h2>
 
-<div class="grid">
+  <p class="section-desc"
+     data-ar="نقدم حلولاً عملية تساعد مشروعك على النمو والتميز على الإنترنت."
+     data-fr="Des solutions pratiques pour développer votre présence en ligne.">
+    نقدم حلولاً عملية تساعد مشروعك على النمو والتميز على الإنترنت.
+  </p>
 
-<div class="card">
-<h3 data-ar="🌐 تصميم المواقع" data-fr="🌐 Création de sites web">🌐 تصميم المواقع</h3>
-<p data-ar="مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع."
-data-fr="Sites professionnels et adaptés aux entreprises et commerces.">
-مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع.
-</p>
-<div class="price">À partir de 900 DH</div>
-</div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3 data-ar="تصميم المواقع" data-fr="Création de sites web">تصميم المواقع</h3>
+      <p data-ar="مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع."
+         data-fr="Sites professionnels et adaptés aux entreprises et commerces.">
+        مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع.
+      </p>
+      <div class="price">À partir de 900 DH</div>
+    </div>
 
-<div class="card">
-<h3 data-ar="📱 تطبيقات الهاتف" data-fr="📱 Applications mobiles">📱 تطبيقات الهاتف</h3>
-<p data-ar="تطبيقات Android عملية حسب احتياجات مشروعك."
-data-fr="Applications Android adaptées aux besoins de votre activité.">
-تطبيقات Android عملية حسب احتياجات مشروعك.
-</p>
-<div class="price" data-ar="حسب المشروع" data-fr="Sur devis">حسب المشروع</div>
-</div>
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3 data-ar="تطبيقات الهاتف" data-fr="Applications mobiles">تطبيقات الهاتف</h3>
+      <p data-ar="تطبيقات Android عملية حسب احتياجات مشروعك."
+         data-fr="Applications Android adaptées aux besoins de votre activité.">
+        تطبيقات Android عملية حسب احتياجات مشروعك.
+      </p>
+      <div class="price" data-ar="حسب المشروع" data-fr="Sur devis">حسب المشروع</div>
+    </div>
 
-<div class="card">
-<h3 data-ar="🛍️ الكتالوج الإلكتروني" data-fr="🛍️ Catalogue digital">🛍️ الكتالوج الإلكتروني</h3>
-<p data-ar="عرض منتجاتك وخدماتك بطريقة منظمة وسهلة."
-data-fr="Présentez vos produits et services clairement.">
-عرض منتجاتك وخدماتك بطريقة منظمة وسهلة.
-</p>
-<div class="price">À partir de 600 DH</div>
-</div>
-
-</div>
+    <div class="card">
+      <div class="card-icon">🛍️</div>
+      <h3 data-ar="الكتالوج الإلكتروني" data-fr="Catalogue digital">الكتالوج الإلكتروني</h3>
+      <p data-ar="عرض منتجاتك وخدماتك بطريقة منظمة وسهلة."
+         data-fr="Présentez vos produits et services clairement.">
+        عرض منتجاتك وخدماتك بطريقة منظمة وسهلة.
+      </p>
+      <div class="price">À partir de 600 DH</div>
+    </div>
+  </div>
 </section>
 
 <section class="projects" id="projects">
-<h2 class="section-title"
-data-ar="نماذج <span>أعمالنا</span>"
-data-fr="Nos <span>réalisations</span>">
-نماذج <span>أعمالنا</span>
-</h2>
+  <h2 class="section-title"
+      data-ar="نماذج <span>أعمالنا</span>"
+      data-fr="Nos <span>réalisations</span>">
+    نماذج <span>أعمالنا</span>
+  </h2>
 
-<div class="grid">
+  <p class="section-desc"
+     data-ar="اكتشف بعض النماذج التجريبية للتصاميم التي يمكن تطويرها."
+     data-fr="Découvrez quelques exemples de designs possibles.">
+    اكتشف بعض النماذج التجريبية للتصاميم التي يمكن تطويرها.
+  </p>
 
-<div class="card">
-<span class="project-tag" data-ar="نموذج تجريبي" data-fr="Démo">نموذج تجريبي</span>
-<h3 data-ar="موقع مطعم" data-fr="Site de restaurant">موقع مطعم</h3>
-<p data-ar="تصميم نموذجي لمطعم مع قائمة الطعام ووسائل التواصل."
-data-fr="Exemple de site pour restaurant avec menu et contact.">
-تصميم نموذجي لمطعم مع قائمة الطعام ووسائل التواصل.
-</p>
-</div>
+  <div class="grid">
+    <div class="card project-card">
+      <span class="project-tag" data-ar="نموذج تجريبي" data-fr="Démo">نموذج تجريبي</span>
+      <div class="card-icon">🍽️</div>
+      <h3 data-ar="موقع مطعم" data-fr="Site de restaurant">موقع مطعم</h3>
+      <p data-ar="تصميم نموذجي لمطعم مع قائمة الطعام ووسائل التواصل."
+         data-fr="Exemple de site pour restaurant avec menu et contact.">
+        تصميم نموذجي لمطعم مع قائمة الطعام ووسائل التواصل.
+      </p>
+    </div>
 
-<div class="card">
-<span class="project-tag" data-ar="نموذج تجريبي" data-fr="Démo">نموذج تجريبي</span>
-<h3 data-ar="متجر إلكتروني" data-fr="Boutique en ligne">متجر إلكتروني</h3>
-<p data-ar="واجهة لعرض المنتجات والأسعار وطلبات الزبناء."
-data-fr="Présentation de produits, prix et demandes clients.">
-واجهة لعرض المنتجات والأسعار وطلبات الزبناء.
-</p>
-</div>
+    <div class="card project-card">
+      <span class="project-tag" data-ar="نموذج تجريبي" data-fr="Démo">نموذج تجريبي</span>
+      <div class="card-icon">🛒</div>
+      <h3 data-ar="متجر إلكتروني" data-fr="Boutique en ligne">متجر إلكتروني</h3>
+      <p data-ar="واجهة لعرض المنتجات والأسعار وطلبات الزبناء."
+         data-fr="Présentation de produits, prix et demandes clients.">
+        واجهة لعرض المنتجات والأسعار وطلبات الزبناء.
+      </p>
+    </div>
 
-<div class="card">
-<span class="project-tag" data-ar="نموذج تجريبي" data-fr="Démo">نموذج تجريبي</span>
-<h3 data-ar="موقع شركة" data-fr="Site d'entreprise">موقع شركة</h3>
-<p data-ar="صفحة تعريفية بالخدمات والمعلومات وطرق التواصل."
-data-fr="Présentation d'entreprise, services et coordonnées.">
-صفحة تعريفية بالخدمات والمعلومات وطرق التواصل.
-</p>
-</div>
-
-</div>
+    <div class="card project-card">
+      <span class="project-tag" data-ar="نموذج تجريبي" data-fr="Démo">نموذج تجريبي</span>
+      <div class="card-icon">🏢</div>
+      <h3 data-ar="موقع شركة" data-fr="Site d'entreprise">موقع شركة</h3>
+      <p data-ar="صفحة تعريفية بالخدمات والمعلومات وطرق التواصل."
+         data-fr="Présentation d'entreprise, services et coordonnées.">
+        صفحة تعريفية بالخدمات والمعلومات وطرق التواصل.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="about" id="about">
-<h2 class="section-title"
-data-ar="من <span>نحن؟</span>"
-data-fr="Qui <span>sommes-nous ?</span>">
-من <span>نحن؟</span>
-</h2>
+  <h2 class="section-title"
+      data-ar="من <span>نحن؟</span>"
+      data-fr="Qui <span>sommes-nous ?</span>">
+    من <span>نحن؟</span>
+  </h2>
 
-<p data-ar="DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة. نركز على الجودة والبساطة وتجربة المستخدم."
-data-fr="DARBYTE Studio accompagne les petites et moyennes entreprises dans leur transformation digitale grâce aux sites web, applications et solutions innovantes. Nous privilégions la qualité, la simplicité et l'expérience utilisateur.">
-DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة. نركز على الجودة والبساطة وتجربة المستخدم.
-</p>
+  <p class="section-desc"
+     data-ar="نعمل على تقديم حلول رقمية بسيطة وعصرية تساعد المقاولات والمشاريع على تطوير حضورها."
+     data-fr="Nous proposons des solutions numériques modernes pour aider les entreprises à développer leur présence.">
+    نعمل على تقديم حلول رقمية بسيطة وعصرية تساعد المقاولات والمشاريع على تطوير حضورها.
+  </p>
+
+  <div class="about-box">
+    <p data-ar="DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة. نركز على الجودة والبساطة وتجربة المستخدم."
+       data-fr="DARBYTE Studio accompagne les petites et moyennes entreprises dans leur transformation digitale grâce aux sites web, applications et solutions innovantes. Nous privilégions la qualité, la simplicité et l'expérience utilisateur.">
+      DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة. نركز على الجودة والبساطة وتجربة المستخدم.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>100%</strong>
+        <span data-ar="اهتمام بالجودة" data-fr="Priorité à la qualité">اهتمام بالجودة</span>
+      </div>
+      <div class="stat">
+        <strong>24/7</strong>
+        <span data-ar="تواصل عبر الإنترنت" data-fr="Contact en ligne">تواصل عبر الإنترنت</span>
+      </div>
+      <div class="stat">
+        <strong>Mobile</strong>
+        <span data-ar="تصميم متجاوب" data-fr="Design responsive">تصميم متجاوب</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="cta" id="contact">
-<h2 data-ar="عندك فكرة؟ لنبدأ العمل عليها!"
-data-fr="Un projet ? Parlons-en !">
-عندك فكرة؟ لنبدأ العمل عليها!
-</h2>
+  <h2 data-ar="عندك فكرة؟ لنبدأ العمل عليها!"
+      data-fr="Un projet ? Parlons-en !">
+    عندك فكرة؟ لنبدأ العمل عليها!
+  </h2>
 
-<p data-ar="تواصل معنا للحصول على عرض مناسب لمشروعك."
-data-fr="Contactez-nous pour discuter de votre projet.">
-تواصل معنا للحصول على عرض مناسب لمشروعك.
-</p>
+  <p data-ar="تواصل معنا للحصول على عرض مناسب لمشروعك."
+     data-fr="Contactez-nous pour discuter de votre projet.">
+    تواصل معنا للحصول على عرض مناسب لمشروعك.
+  </p>
 
-<a class="whatsapp"
-href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio%2C%20bghit%20n3ref%20aktar%203la%20khadamatkom."
-target="_blank" rel="noopener"
-data-ar="🟢 تواصل معنا عبر WhatsApp"
-data-fr="🟢 Contactez-nous sur WhatsApp">
-🟢 تواصل معنا عبر WhatsApp
-</a>
+  <a class="whatsapp"
+     href="https://wa.me/212611659452?text=Salam%20DARBYTE%20Studio%2C%20bghit%20n3ref%20aktar%203la%20khadamatkom."
+     target="_blank" rel="noopener"
+     data-ar="🟢 تواصل معنا عبر WhatsApp"
+     data-fr="🟢 Contactez-nous sur WhatsApp">
+    🟢 تواصل معنا عبر WhatsApp
+  </a>
+
+  <p class="phone-number">WhatsApp: +212 611 659 452</p>
 </section>
 
 </main>
 
 <footer>
-© 2026 DARBYTE Studio. All rights reserved.
+  © 2026 DARBYTE Studio. All rights reserved.
 </footer>
 
 <script>
 let lang="ar";
 
 function changeLang(){
-lang=lang==="ar"?"fr":"ar";
+  lang=lang==="ar"?"fr":"ar";
 
-document.documentElement.lang=lang;
-document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
 
-document.querySelector(".lang").textContent=
-lang==="ar"?"FR":"AR";
+  document.querySelector(".lang").textContent=
+    lang==="ar"?"FR":"AR";
 
-document.querySelectorAll("[data-ar]").forEach(el=>{
-el.innerHTML=el.getAttribute("data-"+lang);
-});
+  document.querySelectorAll("[data-ar]").forEach(el=>{
+    el.innerHTML=el.getAttribute("data-"+lang);
+  });
 }
 </script>
 
