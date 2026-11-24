@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DARBYTE Studio - Web development, mobile applications and digital solutions.">
+<title>DARBYTE Studio | Digital Solutions</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0c1424;color:#f4f7fb;line-height:1.8}
+header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #26344a}
+.logo{font-size:25px;font-weight:bold;color:#42d6ad;letter-spacing:1px}
+nav a{color:#dce5ef;text-decoration:none;margin:0 10px;font-size:14px}
+button,.btn{background:#42d6ad;color:#0c1424;border:0;padding:11px 20px;border-radius:8px;font-weight:bold;cursor:pointer;text-decoration:none}
+.hero{text-align:center;padding:95px 20px 85px;background:radial-gradient(ellipse at top,#1b3950,#0c1424 70%)}
+.hero h1{font-size:43px;line-height:1.35;margin-bottom:18px}
+.hero h1 span{color:#42d6ad}
+.hero p{color:#b5c4d5;max-width:650px;margin:0 auto 28px}
+section{padding:65px 7%}
+.section-title{text-align:center;font-size:29px;margin-bottom:35px}
+.section-title span{color:#42d6ad}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#172439;padding:25px;border:1px solid #293c52;border-radius:13px}
+.card h3{color:#42d6ad;margin-bottom:12px}
+.card p{color:#bdc9d7;font-size:14px}
+.price{font-size:23px;font-weight:bold;margin-top:15px}
+.about{text-align:center;background:#111e32}
+.about p{max-width:700px;margin:auto;color:#bdc9d7}
+.cta{text-align:center;background:#142c3c;padding:55px 20px}
+.cta p{color:#c4d1df;margin:10px 0 25px}
+footer{text-align:center;padding:25px;color:#899caf;font-size:13px}
+.lang{background:transparent;border:1px solid #42d6ad;color:#42d6ad}
+@media(max-width:600px){
+header{flex-wrap:wrap;gap:15px}
+nav{width:100%;display:flex;flex-wrap:wrap;gap:8px}
+nav a{margin:0}
+.hero{padding:65px 18px}
+.hero h1{font-size:32px}
+section{padding:50px 6%}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">DARBYTE<span> .</span></div>
+<nav>
+<a href="#home" data-ar="الرئيسية" data-fr="Accueil">الرئيسية</a>
+<a href="#services" data-ar="خدماتنا" data-fr="Services">خدماتنا</a>
+<a href="#about" data-ar="من نحن" data-fr="À propos">من نحن</a>
+<a href="#contact" data-ar="اتصل بنا" data-fr="Contact">اتصل بنا</a>
+</nav>
+<button class="lang" onclick="changeLang()">FR</button>
+</header>
+
+<main>
+<div class="hero" id="home">
+<h1 data-ar="نحوّل أفكارك إلى <span>حلول رقمية</span>"
+data-fr="Transformons vos idées en <span>solutions digitales</span>">
+نحوّل أفكارك إلى <span>حلول رقمية</span>
+</h1>
+<p data-ar="DARBYTE Studio شريكك الرقمي لإنشاء المواقع الإلكترونية، تطبيقات الهاتف والحلول التقنية العصرية."
+data-fr="DARBYTE Studio, votre partenaire pour créer des sites web, applications mobiles et solutions numériques modernes.">
+DARBYTE Studio شريكك الرقمي لإنشاء المواقع الإلكترونية، تطبيقات الهاتف والحلول التقنية العصرية.
+</p>
+<a class="btn" href="#services" data-ar="اكتشف خدماتنا" data-fr="Découvrir nos services">اكتشف خدماتنا</a>
+</div>
+
+<section id="services">
+<h2 class="section-title" data-ar="خدماتنا <span>الرقمية</span>" data-fr="Nos <span>services</span>">خدماتنا <span>الرقمية</span></h2>
+<div class="grid">
+<div class="card">
+<h3 data-ar="🌐 تصميم المواقع" data-fr="🌐 Création de sites web">🌐 تصميم المواقع</h3>
+<p data-ar="مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع."
+data-fr="Sites professionnels et adaptés aux entreprises et commerces.">مواقع احترافية ومتجاوبة للشركات والمحلات والمشاريع.</p>
+<div class="price">À partir de 900 DH</div>
+</div>
+<div class="card">
+<h3 data-ar="📱 تطبيقات الهاتف" data-fr="📱 Applications mobiles">📱 تطبيقات الهاتف</h3>
+<p data-ar="تطبيقات Android بسيطة وعملية حسب احتياجات مشروعك."
+data-fr="Applications Android pratiques adaptées à votre activité.">تطبيقات Android بسيطة وعملية حسب احتياجات مشروعك.</p>
+<div class="price" data-ar="حسب المشروع" data-fr="Sur devis">حسب المشروع</div>
+</div>
+<div class="card">
+<h3 data-ar="🛍️ الكتالوج الإلكتروني" data-fr="🛍️ Catalogue digital">🛍️ الكتالوج الإلكتروني</h3>
+<p data-ar="عرض منتجاتك وخدماتك بطريقة منظمة وسهلة."
+data-fr="Présentez vos produits et services clairement.">عرض منتجاتك وخدماتك بطريقة منظمة وسهلة.</p>
+<div class="price">À partir de 600 DH</div>
+</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2 class="section-title" data-ar="من نحن؟" data-fr="Qui sommes-nous ?">من نحن؟</h2>
+<p data-ar="DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة."
+data-fr="DARBYTE Studio accompagne les petites et moyennes entreprises dans leur transformation digitale grâce aux sites web, applications et solutions innovantes.">
+DARBYTE Studio استوديو رقمي يهدف إلى مساعدة المقاولات الصغيرة والمتوسطة على تطوير حضورها الرقمي من خلال مواقع إلكترونية وتطبيقات وحلول مبتكرة.
+</p>
+</section>
+
+<section class="cta" id="contact">
+<h2 data-ar="عندك فكرة؟ لنبدأ العمل عليها!" data-fr="Un projet ? Parlons-en !">عندك فكرة؟ لنبدأ العمل عليها!</h2>
+<p data-ar="تواصل معنا للحصول على عرض مناسب لمشروعك."
+data-fr="Contactez-nous pour discuter de votre projet.">تواصل معنا للحصول على عرض مناسب لمشروعك.</p>
+<p data-ar="قنوات التواصل الرسمية ستضاف قريباً."
+data-fr="Nos coordonnées seront bientôt disponibles.">قنوات التواصل الرسمية ستضاف قريباً.</p>
+</section>
+</main>
+
+<footer>© 2026 DARBYTE Studio. All rights reserved.</footer>
+
+<script>
+let lang="ar";
+function changeLang(){
+lang=lang==="ar"?"fr":"ar";
+document.documentElement.lang=lang;
+document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+document.querySelector(".lang").textContent=lang==="ar"?"FR":"AR";
+document.querySelectorAll("[data-ar]").forEach(el=>{
+el.innerHTML=el.getAttribute("data-"+lang);
+});
+}
+</script>
+</body>
+</html>
